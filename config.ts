@@ -15,7 +15,7 @@ const siteMetadata = {
     author: `@_akzhy`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
-    darkmode: true,
+    darkmode: false,
     switchTheme: true,
     navLinks: [
         {
