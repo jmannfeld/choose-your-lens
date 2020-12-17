@@ -7,7 +7,7 @@ const siteMetadata = {
     titleImage: `/images/wall.png`,
     ogImage: `/images/wall.png`,
     twoColumnWall: true,
-    cookiePolicy: true,
+    cookiePolicy: false,
     introTag: `LIFE COACHING BY MARIA`,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
     about:
