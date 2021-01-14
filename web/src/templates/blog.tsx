@@ -109,7 +109,9 @@ export const query = graphql`
     #     }
     # }
     query BlogQuery($slug: String!) {
-    allSanityPost(filter: {slug: {current: {eq: $slug}}}) {
+    allSanityPost(
+        filter: {slug: {current: {eq: $slug}}}
+    ) {
         edges {
         node {
             id
@@ -118,7 +120,7 @@ export const query = graphql`
             current
             }
             description
-            publishedAt(formatString: "MMMM, DD YYYY")
+            publishedAt(formatString: "MMMM, Do YYYY")
             body {
             children {
                 text

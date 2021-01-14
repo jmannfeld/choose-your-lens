@@ -247,6 +247,10 @@ export const query = graphql`
         }
         blog: allSanityPost(
             limit: 6
+            sort: {
+                fields: [publishedAt]
+                order: DESC
+            }
         ) {
             edges {
                 node {
@@ -270,7 +274,7 @@ export const query = graphql`
                             }
                         }
                     }
-                    publishedAt(formatString: "MMMM, DD YYYY")
+                    publishedAt(formatString: "MMMM, Do YYYY")
                     body {
                         children {
                             text

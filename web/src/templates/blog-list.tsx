@@ -65,7 +65,12 @@ export const query = graphql`
     #     }
     # }
     query BlogListQuery {
-        allSanityPost {
+        allSanityPost(
+            sort: {
+                fields: [publishedAt]
+                order: DESC
+            }
+        ) {
             edges {
                 node {
                     id
@@ -88,7 +93,7 @@ export const query = graphql`
                             }
                         }
                     }
-                    publishedAt(formatString: "MMMM, DD YYYY")
+                    publishedAt(formatString: "MMMM, Do YYYY")
                     body {
                         children {
                             text
