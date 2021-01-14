@@ -245,27 +245,36 @@ export const query = graphql`
                 }
             }
         }
-        blog: allMdx(
-            filter: { fields: { sourceName: { eq: "blog" } } }
+        blog: allSanityPost(
             limit: 6
         ) {
             edges {
                 node {
                     id
-                    frontmatter {
-                        title
-                        description
-                        date(formatString: "DD MMMM YYYY")
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 1000) {
-                                    ...GatsbyImageSharpFluid
-                                }
+                    title
+                    description
+                    slug {
+                        current
+                    }
+                    tileImage {
+                        asset {
+                            fluid(maxWidth: 700) {
+                                ...GatsbySanityImageFluid
                             }
                         }
                     }
-                    fields {
-                        slug
+                    bannerImage {
+                        asset {
+                            fluid(maxWidth: 700) {
+                                ...GatsbySanityImageFluid
+                            }
+                        }
+                    }
+                    publishedAt(formatString: "MMMM, DD YYYY")
+                    body {
+                        children {
+                            text
+                        }
                     }
                 }
             }

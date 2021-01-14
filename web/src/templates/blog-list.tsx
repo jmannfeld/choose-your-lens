@@ -88,7 +88,7 @@ export const query = graphql`
                             }
                         }
                     }
-                    publishedAt
+                    publishedAt(formatString: "MMMM, DD YYYY")
                     body {
                         children {
                             text
