@@ -2,6 +2,9 @@ import { createFilePath } from 'gatsby-source-filesystem';
 import { GatsbyNode } from 'gatsby';
 import path from 'path';
 
+require("@babel/core").transform("code", {
+  plugins: ["@babel/plugin-syntax-optional-chaining"]
+});
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = async ({ node, getNode, actions }) => {
     const { createNodeField } = actions
