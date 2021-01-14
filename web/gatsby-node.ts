@@ -65,13 +65,13 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
     `).then(result => {
         console.log('result.data.allMarkdown.edges', result.data.allMarkdown.edges)
         result.data.allMarkdown.edges.concat(result.data.blog.edges).forEach(({ node }) => {
-            let template = node.fields?.sourceName || 'blog'
+            let template = node.fields !== null && node.fields !== undefined && node.fields.slug !== null && node.fields.slug !== undefined ? node.fields.sourceName : 'blog'
             console.log('template:', template)
             createPage({
-                path: node.fields?.slug || `/blog/${node.slug.current}`,
+                path: node.fields !== null && node.fields !== undefined && node.fields.slug !== null && node.fields.slug !== undefined ? node.fields.slug : `/blog/${node.slug.current}`,
                 component: path.resolve("./src/templates/" + template + ".tsx"),
                 context: {
-                    slug: node.fields?.slug || node.slug.current,
+                    slug: node.fields !== null && node.fields !== undefined && node.fields.slug !== null && node.fields.slug !== undefined ? node.fields.slug : node.slug.current,
                 },
             })
         })
