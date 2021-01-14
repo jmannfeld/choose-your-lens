@@ -15,7 +15,7 @@ export const ItemBlog: React.FC<{}> = ( {data} ) => {
     return (
         <div className="blog-item w-full md:w-1/2 lg:w-1/3 p-4">
             <div className={`transition-all duration-300 hover:shadow-2xl shadow ${focused && 'focused'}`}>
-                <Link to={`blog/${data.slug.current}`} title={data.title} onFocus={() => changeFocused(true)} onBlur={() => changeFocused(false)}>
+                <Link to={`/blog/${data.slug.current}`} title={data.title} onFocus={() => changeFocused(true)} onBlur={() => changeFocused(false)}>
                     <div className="image">
                         <Img
                             fluid={data.tileImage.asset.fluid}
