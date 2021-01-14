@@ -81,40 +81,63 @@ export interface IndexPageQuery_portfolio {
   edges: IndexPageQuery_portfolio_edges[];
 }
 
-export interface IndexPageQuery_blog_edges_node_frontmatter_image_childImageSharp_fluid {
+export interface IndexPageQuery_blog_edges_node_slug {
+  current: string | null;
+}
+
+export interface IndexPageQuery_blog_edges_node_tileImage_asset_fluid {
   base64: string | null;
   aspectRatio: number;
   src: string;
   srcSet: string;
+  srcWebp: string | null;
+  srcSetWebp: string | null;
   sizes: string;
 }
 
-export interface IndexPageQuery_blog_edges_node_frontmatter_image_childImageSharp {
-  fluid: IndexPageQuery_blog_edges_node_frontmatter_image_childImageSharp_fluid | null;
+export interface IndexPageQuery_blog_edges_node_tileImage_asset {
+  fluid: IndexPageQuery_blog_edges_node_tileImage_asset_fluid | null;
 }
 
-export interface IndexPageQuery_blog_edges_node_frontmatter_image {
-  /**
-   * Returns the first child node of type ImageSharp or null if there are no children of given type on this node
-   */
-  childImageSharp: IndexPageQuery_blog_edges_node_frontmatter_image_childImageSharp | null;
+export interface IndexPageQuery_blog_edges_node_tileImage {
+  asset: IndexPageQuery_blog_edges_node_tileImage_asset | null;
 }
 
-export interface IndexPageQuery_blog_edges_node_frontmatter {
-  title: string;
-  description: string | null;
-  date: any | null;
-  image: IndexPageQuery_blog_edges_node_frontmatter_image | null;
+export interface IndexPageQuery_blog_edges_node_bannerImage_asset_fluid {
+  base64: string | null;
+  aspectRatio: number;
+  src: string;
+  srcSet: string;
+  srcWebp: string | null;
+  srcSetWebp: string | null;
+  sizes: string;
 }
 
-export interface IndexPageQuery_blog_edges_node_fields {
-  slug: string | null;
+export interface IndexPageQuery_blog_edges_node_bannerImage_asset {
+  fluid: IndexPageQuery_blog_edges_node_bannerImage_asset_fluid | null;
+}
+
+export interface IndexPageQuery_blog_edges_node_bannerImage {
+  asset: IndexPageQuery_blog_edges_node_bannerImage_asset | null;
+}
+
+export interface IndexPageQuery_blog_edges_node_body_children {
+  text: string | null;
+}
+
+export interface IndexPageQuery_blog_edges_node_body {
+  children: (IndexPageQuery_blog_edges_node_body_children | null)[] | null;
 }
 
 export interface IndexPageQuery_blog_edges_node {
   id: string;
-  frontmatter: IndexPageQuery_blog_edges_node_frontmatter | null;
-  fields: IndexPageQuery_blog_edges_node_fields | null;
+  title: string | null;
+  description: string | null;
+  slug: IndexPageQuery_blog_edges_node_slug | null;
+  tileImage: IndexPageQuery_blog_edges_node_tileImage | null;
+  bannerImage: IndexPageQuery_blog_edges_node_bannerImage | null;
+  publishedAt: any | null;
+  body: (IndexPageQuery_blog_edges_node_body | null)[] | null;
 }
 
 export interface IndexPageQuery_blog_edges {

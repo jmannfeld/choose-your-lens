@@ -120,7 +120,7 @@ export const query = graphql`
             current
             }
             description
-            publishedAt(formatString: "MMMM, Do YYYY")
+            publishedAt(formatString: "MMMM Do, YYYY")
             body {
             children {
                 text

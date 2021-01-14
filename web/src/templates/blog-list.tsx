@@ -93,7 +93,7 @@ export const query = graphql`
                             }
                         }
                     }
-                    publishedAt(formatString: "MMMM, Do YYYY")
+                    publishedAt(formatString: "MMMM Do, YYYY")
                     body {
                         children {
                             text

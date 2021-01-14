@@ -146,7 +146,7 @@ const About = ({ data }) => {
         <div className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Defy the Odds of Labels
+                    Inspiring all learners to embrace their passions and create their own authentic paths in life.
                 </h2>
                 <p className="mt-5 text-lg">{data}</p>
             </div>
@@ -274,7 +274,7 @@ export const query = graphql`
                             }
                         }
                     }
-                    publishedAt(formatString: "MMMM, Do YYYY")
+                    publishedAt(formatString: "MMMM Do, YYYY")
                     body {
                         children {
                             text
