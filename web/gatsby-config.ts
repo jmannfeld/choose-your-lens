@@ -3,6 +3,8 @@ import tailwindConfig from "./tailwind.config";
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
 
+console.log('__dirname', __dirname)
+
 const plugins = [
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -10,13 +12,13 @@ const plugins = [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-codegen`,
     `gatsby-optional-chaining`,
-    {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-            name: `blog`,
-            path: `${__dirname}/contents/blog/`,
-        },
-    },
+    // {
+    //     resolve: `gatsby-source-filesystem`,
+    //     options: {
+    //         name: `blog`,
+    //         path: `${__dirname}/contents/blog/`,
+    //     },
+    // },
     {
         resolve: `gatsby-source-filesystem`,
         options: {
