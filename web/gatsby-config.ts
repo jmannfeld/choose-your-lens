@@ -9,6 +9,7 @@ const plugins = [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-codegen`,
+    `gatsby-optional-chaining`,
     {
         resolve: `gatsby-source-filesystem`,
         options: {
