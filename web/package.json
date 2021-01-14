@@ -16,8 +16,9 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.8",
     "@mdx-js/react": "^1.5.8",
+    "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.1.4",
-    "gatsby": "^2.19.45",
+    "gatsby": "^2.30.2",
     "gatsby-image": "^2.3.1",
     "gatsby-optional-chaining": "^1.0.1",
     "gatsby-plugin-codegen": "^1.1.0",

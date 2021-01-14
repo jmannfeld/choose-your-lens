@@ -12,13 +12,13 @@ const plugins = [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-codegen`,
     `gatsby-optional-chaining`,
-    // {
-    //     resolve: `gatsby-source-filesystem`,
-    //     options: {
-    //         name: `blog`,
-    //         path: `${__dirname}/contents/blog/`,
-    //     },
-    // },
+    {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+            name: `blog`,
+            path: `${__dirname}/contents/blog/`,
+        },
+    },
     {
         resolve: `gatsby-source-filesystem`,
         options: {
