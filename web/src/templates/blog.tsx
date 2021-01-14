@@ -27,12 +27,11 @@ const serializers = {
 export default function blog({ location, data, pageContext }: PageProps<{}>) {
     console.log('blog.tsx file data', data)
     const { node: blog } = data.allSanityPost.edges[0]
-    
-
     const [postContent, setPostContent] = useState([])
 
     useEffect(() => {
-        client.fetch(`*[_type == "post"] && slug.current == ${blog.slug.current}`).then(
+        const qryStr = `*[_type == "post" && slug.current == '${blog.slug.current}'][0]`
+        client.fetch(qryStr).then(
             post => {
                 setPostContent(post)
             }
