@@ -32,7 +32,7 @@ export default function blog({ location, data, pageContext }: PageProps<{}>) {
     const [postContent, setPostContent] = useState([])
 
     useEffect(() => {
-        client.fetch('*[_type == "post"][0]').then(
+        client.fetch(`*[_type == "post"] && slug.current == ${blog.slug.current}`).then(
             post => {
                 setPostContent(post)
             }
