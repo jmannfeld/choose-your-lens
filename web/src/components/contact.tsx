@@ -26,7 +26,7 @@ const Form: React.FC<{}> = () => {
     return (
         <form
             data-netlify="true"
-            data-netlify-recaptcha="true"
+            // data-netlify-recaptcha="true"
             name="Contact Form"
             method="POST"
             action="/"
@@ -81,6 +81,7 @@ const Form: React.FC<{}> = () => {
             <TextInput
                 label="Name"
                 name="name"
+                type="text"
                 onChange={e =>
                     updateData({
                         name: e.target.value,
@@ -129,7 +130,7 @@ const Form: React.FC<{}> = () => {
                 }
             />
             <div className="py-3 lg:p-4">
-                <div data-netlify-recaptcha="true"></div>
+                {/* <div data-netlify-recaptcha="true"></div> */}
                 <FormMessage
                     show={feedback[4] !== undefined}
                     type={feedback[4]?.type || "error"}
