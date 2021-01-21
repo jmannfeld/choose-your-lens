@@ -77,6 +77,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 }
             }}
         >
+            <input type="hidden" name="form-name" value="Contact Form" />
             <TextInput
                 label="Name"
                 name="name"
