@@ -25,7 +25,8 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
     return (
         <form
-            netlify="true"
+            data-netlify="true"
+            name="Contact"
             onSubmit={event => {
                 event.preventDefault()
                 setTransactionState(true);
