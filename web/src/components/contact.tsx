@@ -10,7 +10,7 @@ import { ContactQuery_site_siteMetadata_contact } from "../pages/__generated__/C
 
 type FeedbackState = { [id: number]: { message?: string, type?: string }}
 
-const Form: React.FC<{ api: string }> = ({ api }) => {
+const Form: React.FC<{}> = () => {
     const [data, changeData] = useState({
         name: "",
         email: "",
@@ -30,52 +30,52 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
             name="Contact Form"
             method="POST"
             action="/"
-            onSubmit={event => {
-                event.preventDefault()
-                setTransactionState(true);
+            // onSubmit={event => {
+            //     event.preventDefault()
+            //     setTransactionState(true);
 
-                const validate = beforeContactFormSubmit(data);
+            //     const validate = beforeContactFormSubmit(data);
 
-                if (validate.result) {
-                    setFeedback({});
-                    contactFormSubmit(api, validate.data).then(res => {
-                        if (res.result) {
-                            setFeedback({
-                                4: {
-                                    type: "success",
-                                    message:
-                                        "Your message has been sent.",
-                                },
-                            })
-                        } else {
-                            setFeedback({
-                                4: {
-                                    message:
-                                        "There was an error sending the message. Please try again.",
-                                },
-                            })
-                        }
-                        setTransactionState(false);
-                    }).catch(err => {
-                        setFeedback({
-                            4: {
-                                message:
-                                    "There was an error sending the message. Please try again.",
-                            },
-                        })
-                        setTransactionState(false);
-                    })
-                } else {
-                    const errs = {}
+            //     if (validate.result) {
+            //         setFeedback({});
+            //         contactFormSubmit(api, validate.data).then(res => {
+            //             if (res.result) {
+            //                 setFeedback({
+            //                     4: {
+            //                         type: "success",
+            //                         message:
+            //                             "Your message has been sent.",
+            //                     },
+            //                 })
+            //             } else {
+            //                 setFeedback({
+            //                     4: {
+            //                         message:
+            //                             "There was an error sending the message. Please try again.",
+            //                     },
+            //                 })
+            //             }
+            //             setTransactionState(false);
+            //         }).catch(err => {
+            //             setFeedback({
+            //                 4: {
+            //                     message:
+            //                         "There was an error sending the message. Please try again.",
+            //                 },
+            //             })
+            //             setTransactionState(false);
+            //         })
+            //     } else {
+            //         const errs = {}
 
-                    validate.errors.forEach(err => {
-                        errs[err.code] = { message: err.message }
-                    })
+            //         validate.errors.forEach(err => {
+            //             errs[err.code] = { message: err.message }
+            //         })
 
-                    setFeedback(errs)
-                    setTransactionState(false);
-                }
-            }}
+            //         setFeedback(errs)
+            //         setTransactionState(false);
+            //     }
+            // }}
         >
             <input type="hidden" name="form-name" value="Contact Form" />
             <TextInput

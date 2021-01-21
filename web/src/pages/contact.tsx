@@ -25,7 +25,7 @@ export default ({data, location}: PageProps<ContactQuery>) => {
                 <div className="flex flex-wrap pb-40">
                     {hasContactForm &&
                         <div className="w-full lg:w-1/2 px-6">
-                        <Form api={api_url}/>
+                        <Form/>
                     </div>
                     }
                     <div className={`w-full ${hasContactForm ? 'lg:w-1/2' : 'lg:w-2/3 mx-auto'} px-6 pt-8`}>
