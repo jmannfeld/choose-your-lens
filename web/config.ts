@@ -31,7 +31,7 @@ const siteMetadata = {
             url: "/blog",
         },
         {
-            name: "TESTMONIES",
+            name: "SERVICES",
             url: "/portfolio",
         },
         {
@@ -62,8 +62,13 @@ const siteMetadata = {
             url: "#",
         },
         {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
+            name: "YouTube",
+            icon: "/images/YouTube.svg",
+            url: "#",
+        },
+        {
+            name: "TikTok",
+            icon: "/images/TikTok.svg",
             url: "#",
         },
     ],
