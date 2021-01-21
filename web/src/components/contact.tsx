@@ -26,7 +26,9 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
     return (
         <form
             data-netlify="true"
+            data-netlify-recaptcha="true"
             name="Contact Form"
+            method="POST"
             action="/"
             onSubmit={event => {
                 event.preventDefault()
@@ -126,6 +128,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 }
             />
             <div className="py-3 lg:p-4">
+                <div data-netlify-recaptcha="true"></div>
                 <FormMessage
                     show={feedback[4] !== undefined}
                     type={feedback[4]?.type || "error"}
