@@ -27,6 +27,7 @@ const Form: React.FC<{}> = () => {
         <form
             data-netlify="true"
             // data-netlify-recaptcha="true"
+            netlify-honeypot="bot-field"
             name="Contact Form"
             method="POST"
             action="/"
@@ -78,6 +79,9 @@ const Form: React.FC<{}> = () => {
             // }}
         >
             <input type="hidden" name="form-name" value="Contact Form" />
+            <p className="hidden">
+                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
             <TextInput
                 label="Name"
                 name="name"
