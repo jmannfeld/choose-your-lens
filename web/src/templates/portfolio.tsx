@@ -13,8 +13,6 @@ export default function porfolio ({ }: PageProps<PortfolioQuery, {}>) {
     return (
         <Layout>
             <div className="md:px-4 mt-12 py-6 md:w-11/12 mx-auto">
-                <div className="mx-auto relative">
-                </div>
             </div>
         </Layout>
     )
