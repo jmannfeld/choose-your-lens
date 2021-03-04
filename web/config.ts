@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Choose your lens`,
+    title: `Coming soon!`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,

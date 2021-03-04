@@ -35,15 +35,8 @@ export default function() {
                 <div className="text-color-2 my-3 footer-links animated-link-parent">
                     <Navlinks className="flex items-center justify-center flex-wrap" withThemeSwitch={false}/>
                 </div>
-                <div
-                    className="text-color-2 my-3"
-                >
-                    <ul>
-                    {footerLinks} 
-                    </ul>
-                </div>
                 <p className="text-color-default text-lg">
-                    Copyright &copy; {query.site.siteMetadata.title}{" "}
+                    Copyright &copy; {"Choose your lens "}
                     {new Date().getFullYear()}
                 </p>
             </div>

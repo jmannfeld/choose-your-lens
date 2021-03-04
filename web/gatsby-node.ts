@@ -76,43 +76,5 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
             })
         })
 
-        const blogPosts = result.data.blog.edges
-        console.log('blogPosts', blogPosts)
-        const blogPostsPerPage =
-            result.data.limitPost.siteMetadata.blogItemsPerPage
-        const numBlogPages = Math.ceil(blogPosts.length / blogPostsPerPage)
-
-        Array.from({ length: numBlogPages }).forEach((_, i) => {
-            console.log('blog ix: ', i)
-            createPage({
-                path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-                component: path.resolve("./src/templates/blog-list.tsx"),
-                context: {
-                    limit: blogPostsPerPage,
-                    skip: i * blogPostsPerPage,
-                    numPages: numBlogPages,
-                    currentPage: i + 1,
-                },
-            })
-        })
-
-
-        const portfolioItems = result.data.portfolio.edges
-        const portfolioItemsPerPage =
-            result.data.limitPost.siteMetadata.portfolioItemsPerPage
-        const numPortfolioItems = Math.ceil(portfolioItems.length / portfolioItemsPerPage)
-
-        Array.from({ length: numPortfolioItems }).forEach((_, i) => {
-            createPage({
-                path: i === 0 ? `/portfolio` : `/portfolio/${i + 1}`,
-                component: path.resolve("./src/templates/portfolio-list.tsx"),
-                context: {
-                    limit: portfolioItemsPerPage,
-                    skip: i * portfolioItemsPerPage,
-                    numPages: numPortfolioItems,
-                    currentPage: i + 1,
-                },
-            })
-        })
     })
 }
