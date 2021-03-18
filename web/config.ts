@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Choose your lens`,
+    title: `Choose Your Lens`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
@@ -31,7 +31,7 @@ const siteMetadata = {
             url: "/blog",
         },
         {
-            name: "SERVICES",
+            name: "COLLABS",
             url: "/portfolio",
         },
         {
@@ -46,11 +46,11 @@ const siteMetadata = {
         },
     ],
     social: [
-        {
-            name: "Facebook",
-            icon: "/images/Facebook.svg",
-            url: "#",
-        },
+        // {
+        //     name: "Facebook",
+        //     icon: "/images/Facebook.svg",
+        //     url: "#",
+        // },
         {
             name: "Twitter",
             icon: "/images/Twitter.svg",

@@ -65,9 +65,6 @@ export default function blog({ location, data, pageContext }: PageProps<{}>) {
                                     {blog.publishedAt}
                                 </span>
                             </p>
-                            <p className="mt-3">
-                                {blog.description}
-                            </p>
                         </div>
                     </div>
                 </div>

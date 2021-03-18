@@ -70,7 +70,7 @@ export default ({ children, front, seo, navPlaceholder=true, location }: LayoutP
     }
 
     const switchTheme = () => {
-        const next = theme !== themes.length-1 ? theme+1 : 0;
+        const next = theme !== themes.length - 1 ? theme + 1 : 0;
         changeTheme(next);
         localStorage.setItem("theme", `${next}`);
         store.dispatch("theme:change", undefined);
@@ -103,10 +103,17 @@ const Head = ({ data }) => {
                 href={data.site.siteMetadata.icon}
                 type="image/png"
             />
-            <link
-                href="https://fonts.googleapis.com/css?family=Raleway:500,800&display=swap"
-                rel="stylesheet"
-            />
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            {/* <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Raleway:wght@500;800&display=swap" rel="stylesheet"/> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Montserrat&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Alice&family=Sacramento&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Quicksand&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Lato&family=Arvo&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Spectral&family=Karla&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Karla&family=Quicksand&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet"></link> */}
+            <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fjalla+One&display=swap" rel="stylesheet"></link>
+            {/* <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Oswald&display=swap" rel="stylesheet"></link> */}
         </Helmet>
     )
 }

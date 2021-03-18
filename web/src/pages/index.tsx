@@ -23,8 +23,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         />
     ))
 
-    const blogList = data.blog.edges.map(item => (
-        <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} />
+    const blogList = data.blog.edges.map((item, ix) => (
+        <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} latest={ix === 0 ? true : false} />
     ))
 
     return (
@@ -42,7 +42,9 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
             </div>
-            <Blog>{blogList}</Blog>
+            <Blog>
+                {blogList}
+            </Blog>
             <Contact data={siteData.contact} />
         </Layout>
     )
@@ -148,7 +150,7 @@ const About = ({ data }) => {
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     Inspiring all learners to embrace their passions and create their own authentic paths in life.
                 </h2>
-                <p className="mt-5 text-lg">{data}</p>
+                {/* <p className="mt-5 text-lg">{data}</p> */}
             </div>
         </div>
     )
@@ -246,7 +248,7 @@ export const query = graphql`
             }
         }
         blog: allSanityPost(
-            limit: 6
+            limit: 7
             sort: {
                 fields: [publishedAt]
                 order: DESC
