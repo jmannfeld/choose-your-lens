@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 
-import { ArrowRight } from "react-feather"
+import { ArrowRight, Disc, Eye } from "react-feather"
 import ScrollIntoView from "react-scroll-into-view"
 
 import Layout from "../components/layout"
@@ -22,10 +22,12 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             even={(_ + 1) % 2 === 0}
         />
     ))
+    console.log("index page datat", data.blog)
+    // const blogList = data.blog.edges.map((item, ix) => (
+    //     <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} latest={ix === 0 ? true : false} />
+    // ))
 
-    const blogList = data.blog.edges.map((item, ix) => (
-        <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} latest={ix === 0 ? true : false} />
-    ))
+    const featuredBlogPost = <ItemBlog data={data.blog} key={`b-item-index-${data.blog.id}`} featured="true" />;
 
     return (
         <Layout
@@ -38,12 +40,13 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             location={location}
         >
             <Wall data={siteData} />
-            {siteData.about !== "" && <About data={siteData.about} />}
+            <MissionQuote id="mission-quote"/>
             <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
             </div>
+            <Testimonies />
             <Blog>
-                {blogList}
+                {featuredBlogPost}
             </Blog>
             <Contact data={siteData.contact} />
         </Layout>
@@ -97,9 +100,9 @@ const Wall = ({ data }) => {
                 {data.introTag}
             </p>
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
-            <ScrollIntoView selector="#portfolio">
+            <ScrollIntoView selector="#mission-quote">
                 <Button
-                    title="TESTIMONIES"
+                    title="START YOUR JOURNEY"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
@@ -143,7 +146,7 @@ const Wall = ({ data }) => {
     )
 }
 
-const About = ({ data }) => {
+const MissionQuote = () => {
     return (
         <div className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
@@ -156,12 +159,49 @@ const About = ({ data }) => {
     )
 }
 
+const Testimonies = () => {
+    return (
+        <div className="boxed" id="testimonies">
+            <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
+                <h4 className="py-3 text-color-1 font-black text-5xl">
+                   "She is a professor that wants her students to succeed. You can tell she loves what she does and has a passion for her students education."
+                </h4>
+                <div className="py-6 testimony-dot">
+                    <Eye /><Eye />
+                </div>
+                <h4 className="py-3 text-color-1 font-black text-5xl">
+                    "SO GREAT! Professor Esterline is so passionate, kind, decicated, and thoughtful! I enjoyed her SO much and am so grateful for her. She truly listens and cares about her students."
+                </h4>
+                <div className="py-6 testimony-dot">
+                    <Eye /><Eye />
+                </div>
+                <h4 className="py-3 text-color-1 font-black text-5xl">
+                    "She is a great professor to have, especially during stressful times like this."
+                </h4>
+                <div className="py-6 testimony-dot">
+                    <Eye /><Eye />
+                </div>
+                <h4 className="py-3 text-color-1 font-black text-5xl">
+                    "Professor Esterline did a great job in engaging students by praising their success and giving contructive criticism when necessary."
+                </h4>
+                <div className="py-6 testimony-dot">
+                    <Eye /><Eye />
+                </div>
+                <h4 className="py-3 text-color-1 font-black text-5xl">
+                    "Great instructor! She cares a lot about students succeeding."
+                </h4>
+            </div>
+        </div>
+
+    )
+}
+
 const Blog = ({ children }) => {
     return (
         <div className="container mx-auto px-0">
             <div className="pt-20 pb-10 text-center lg:pt-40 lg:pb-20">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Life Blog
+                    Featured Blog
                 </h2>
             </div>
             <div className="flex flex-wrap">{children}</div>
@@ -247,41 +287,31 @@ export const query = graphql`
                 }
             }
         }
-        blog: allSanityPost(
-            limit: 7
-            sort: {
-                fields: [publishedAt]
-                order: DESC
+        blog: sanityPost(slug: {current: {eq: "choosing-your-lens"}}) {
+            id
+            title
+            description
+            slug {
+                current
             }
-        ) {
-            edges {
-                node {
-                    id
-                    title
-                    description
-                    slug {
-                        current
+            tileImage {
+                asset {
+                    fluid(maxWidth: 700) {
+                        ...GatsbySanityImageFluid
                     }
-                    tileImage {
-                        asset {
-                            fluid(maxWidth: 700) {
-                                ...GatsbySanityImageFluid
-                            }
-                        }
+                }
+            }
+            bannerImage {
+                asset {
+                    fluid(maxWidth: 700) {
+                        ...GatsbySanityImageFluid
                     }
-                    bannerImage {
-                        asset {
-                            fluid(maxWidth: 700) {
-                                ...GatsbySanityImageFluid
-                            }
-                        }
-                    }
-                    publishedAt(formatString: "MMMM Do, YYYY")
-                    body {
-                        children {
-                            text
-                        }
-                    }
+                }
+            }
+            publishedAt(formatString: "MMMM Do, YYYY")
+            body {
+                children {
+                    text
                 }
             }
         }

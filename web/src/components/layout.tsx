@@ -112,8 +112,12 @@ const Head = ({ data }) => {
             {/* <link href="https://fonts.googleapis.com/css2?family=Spectral&family=Karla&display=swap" rel="stylesheet"></link> */}
             {/* <link href="https://fonts.googleapis.com/css2?family=Karla&family=Quicksand&display=swap" rel="stylesheet"></link> */}
             {/* <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet"></link> */}
-            <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fjalla+One&display=swap" rel="stylesheet"></link>
             {/* <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Oswald&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fjalla+One&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fjalla+One&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"></link> */}
+            {/* <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fjalla+One&family=Pacifico&display=swap" rel="stylesheet"></link> */}
+            <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fjalla+One&family=Poiret+One&display=swap" rel="stylesheet"></link>
+            {/* <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fjalla+One&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet"></link> */}
         </Helmet>
     )
 }

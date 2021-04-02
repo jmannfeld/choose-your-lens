@@ -317,6 +317,29 @@ h6 {
     animation: spin 1s infinite linear;
 }
 
+#testimonies h4 {
+    font-family: "Poiret One", cursive;
+    /* font-family: "Shadows Into Light Two", cursive; */
+}
+
+.testimony-dot {
+    color: #8e24aa;
+    display: flex;
+    justify-content: center;
+}
+
+.continue-reading {
+    float: right;
+    padding: 1rem;
+    background-color: #673ab7;
+    color: white;
+}
+
+.continue-text {
+    display: flex;
+    align-items: center;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);

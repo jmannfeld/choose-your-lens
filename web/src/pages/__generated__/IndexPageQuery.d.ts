@@ -81,11 +81,11 @@ export interface IndexPageQuery_portfolio {
   edges: IndexPageQuery_portfolio_edges[];
 }
 
-export interface IndexPageQuery_blog_edges_node_slug {
+export interface IndexPageQuery_blog_slug {
   current: string | null;
 }
 
-export interface IndexPageQuery_blog_edges_node_tileImage_asset_fluid {
+export interface IndexPageQuery_blog_tileImage_asset_fluid {
   base64: string | null;
   aspectRatio: number;
   src: string;
@@ -95,15 +95,15 @@ export interface IndexPageQuery_blog_edges_node_tileImage_asset_fluid {
   sizes: string;
 }
 
-export interface IndexPageQuery_blog_edges_node_tileImage_asset {
-  fluid: IndexPageQuery_blog_edges_node_tileImage_asset_fluid | null;
+export interface IndexPageQuery_blog_tileImage_asset {
+  fluid: IndexPageQuery_blog_tileImage_asset_fluid | null;
 }
 
-export interface IndexPageQuery_blog_edges_node_tileImage {
-  asset: IndexPageQuery_blog_edges_node_tileImage_asset | null;
+export interface IndexPageQuery_blog_tileImage {
+  asset: IndexPageQuery_blog_tileImage_asset | null;
 }
 
-export interface IndexPageQuery_blog_edges_node_bannerImage_asset_fluid {
+export interface IndexPageQuery_blog_bannerImage_asset_fluid {
   base64: string | null;
   aspectRatio: number;
   src: string;
@@ -113,43 +113,35 @@ export interface IndexPageQuery_blog_edges_node_bannerImage_asset_fluid {
   sizes: string;
 }
 
-export interface IndexPageQuery_blog_edges_node_bannerImage_asset {
-  fluid: IndexPageQuery_blog_edges_node_bannerImage_asset_fluid | null;
+export interface IndexPageQuery_blog_bannerImage_asset {
+  fluid: IndexPageQuery_blog_bannerImage_asset_fluid | null;
 }
 
-export interface IndexPageQuery_blog_edges_node_bannerImage {
-  asset: IndexPageQuery_blog_edges_node_bannerImage_asset | null;
+export interface IndexPageQuery_blog_bannerImage {
+  asset: IndexPageQuery_blog_bannerImage_asset | null;
 }
 
-export interface IndexPageQuery_blog_edges_node_body_children {
+export interface IndexPageQuery_blog_body_children {
   text: string | null;
 }
 
-export interface IndexPageQuery_blog_edges_node_body {
-  children: (IndexPageQuery_blog_edges_node_body_children | null)[] | null;
-}
-
-export interface IndexPageQuery_blog_edges_node {
-  id: string;
-  title: string | null;
-  description: string | null;
-  slug: IndexPageQuery_blog_edges_node_slug | null;
-  tileImage: IndexPageQuery_blog_edges_node_tileImage | null;
-  bannerImage: IndexPageQuery_blog_edges_node_bannerImage | null;
-  publishedAt: any | null;
-  body: (IndexPageQuery_blog_edges_node_body | null)[] | null;
-}
-
-export interface IndexPageQuery_blog_edges {
-  node: IndexPageQuery_blog_edges_node;
+export interface IndexPageQuery_blog_body {
+  children: (IndexPageQuery_blog_body_children | null)[] | null;
 }
 
 export interface IndexPageQuery_blog {
-  edges: IndexPageQuery_blog_edges[];
+  id: string;
+  title: string | null;
+  description: string | null;
+  slug: IndexPageQuery_blog_slug | null;
+  tileImage: IndexPageQuery_blog_tileImage | null;
+  bannerImage: IndexPageQuery_blog_bannerImage | null;
+  publishedAt: any | null;
+  body: (IndexPageQuery_blog_body | null)[] | null;
 }
 
 export interface IndexPageQuery {
   site: IndexPageQuery_site | null;
   portfolio: IndexPageQuery_portfolio;
-  blog: IndexPageQuery_blog;
+  blog: IndexPageQuery_blog | null;
 }
