@@ -40,7 +40,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             location={location}
         >
             <Wall data={siteData} />
-            <MissionQuote id="mission-quote"/>
+            <MissionQuote/>
             <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
             </div>
@@ -148,7 +148,7 @@ const Wall = ({ data }) => {
 
 const MissionQuote = () => {
     return (
-        <div className="boxed">
+        <div className="boxed" id="mission-quote">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     Inspiring all learners to embrace their passions and create their own authentic paths in life.
