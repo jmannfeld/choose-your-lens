@@ -8,8 +8,8 @@ const siteMetadata = {
     ogImage: `/images/wall.png`,
     twoColumnWall: true,
     cookiePolicy: false,
-    introTag: `LIFE CONSULTING BY MARIA`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    introTag: `LET YOUR ADVENTURE BEGIN`,
+    description: `Life is a journey, embrace the different paths that lead you back to you, celebrate the small moments. For one day you will look back and you will be amazed by the colors you created on your own journey. Be you, be the amazing you, you are what the world needs!!! Keep making a ruckus!`,
     about:
         "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
     author: `@_akzhy`,
@@ -58,31 +58,30 @@ const siteMetadata = {
         {
             name: "Twitter",
             icon: "/images/Twitter.svg",
-            url: "#",
+            url: "https://twitter.com/learnwithmaria",
         },
         {
             name: "Instagram",
             icon: "/images/Instagram.svg",
-            url: "#",
+            url: "https://www.instagram.com/m_ester2/",
         },
+        // {
+        //     name: "YouTube",
+        //     icon: "/images/YouTube.svg",
+        //     url: "#",
+        // },
         {
-            name: "YouTube",
-            icon: "/images/YouTube.svg",
-            url: "#",
-        },
-        {
-            name: "TikTok",
-            icon: "/images/TikTok.svg",
+            name: "LinkedIn",
+            icon: "/images/LinkedIn.svg",
             url: "#",
         },
     ],
     contact: {
         // leave empty ('') or false to hide form
         api_url: "https://getform.io/f/f227a36e-096a-4c6a-9963-9f1918a85bb3",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
         mail: "mariaesterline@gmail.com",
         phone: "317-828-7087",
-        address: "1234 Sunshine Lane \nFlorida \nUnited States",
+        address: "Gainesville, Florida ☀️",
     },
     disqus: "elemental-netlify-com",
 }

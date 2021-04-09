@@ -43,7 +43,6 @@ export const query = graphql`
             siteMetadata {
                 contact {
                     api_url
-                    description
                     mail
                     phone
                     address

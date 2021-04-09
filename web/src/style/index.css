@@ -340,6 +340,20 @@ h6 {
     align-items: center;
 }
 
+#mission-quote {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.mission-border {
+    border: 6px solid #8e24aa;
+    padding: 1rem 3rem;
+}
+
+.mission-border h2 {
+    padding: 1rem;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);

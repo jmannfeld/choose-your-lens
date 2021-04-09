@@ -3,6 +3,7 @@ const BlockContent = require('@sanity/block-content-to-react')
 import { ArrowRight } from "react-feather"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import { Button } from "../components/ui"
 
 import { Calendar } from "react-feather"
 import { BlogListQuery_allMdx_edges_node } from "../templates/__generated__/BlogListQuery"

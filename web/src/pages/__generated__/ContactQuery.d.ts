@@ -9,7 +9,6 @@
 
 export interface ContactQuery_site_siteMetadata_contact {
   api_url: string | null;
-  description: string | null;
   mail: string | null;
   phone: string | null;
   address: string | null;
