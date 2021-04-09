@@ -65,6 +65,14 @@ export default function blog({ location, data, pageContext }: PageProps<{}>) {
                                     {blog.publishedAt}
                                 </span>
                             </p>
+                            {blog.authors[0] &&
+                                <div className="author-block">
+                                    <div className="image-cropper">
+                                        <img src={blog.authors[0].author.image.asset.url} alt="Blog post author icon" width="50" height="50"></img>
+                                    </div>
+                                    <p className="author-block-name">{blog.authors[0].author.name}</p>
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -117,6 +125,16 @@ export const query = graphql`
             current
             }
             description
+            authors {
+                author {
+                    name
+                    image {
+                        asset {
+                            url
+                        }
+                    }
+                }
+            }
             publishedAt(formatString: "MMMM Do, YYYY")
             body {
             children {

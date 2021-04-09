@@ -14,6 +14,16 @@ export default {
       type: "string",
     },
     {
+      name: "authors",
+      title: "Authors",
+      type: "array",
+      of: [
+        {
+          type: "authorReference",
+        },
+      ],
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -42,6 +52,19 @@ export default {
       name: "publishedAt",
       title: "Published at",
       type: "date",
+    },
+    {
+      name: "tags",
+      type: "array",
+      title: "Tags",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "tag",
+          },
+        },
+      ],
     },
     {
       name: "body",

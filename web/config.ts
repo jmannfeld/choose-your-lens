@@ -73,7 +73,7 @@ const siteMetadata = {
         {
             name: "LinkedIn",
             icon: "/images/LinkedIn.svg",
-            url: "#",
+            url: "https://www.linkedin.com/in/maria-esterline-0ab58b44/",
         },
     ],
     contact: {
