@@ -165,7 +165,7 @@ const Testimonies = () => {
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">Testimonials</h2>
                 <h4 className="py-3 text-color-1 font-black text-5xl">
-                   "Maria is a very passionate about helping others to grow and develop. Maria's communication is always of service to the people that she works with. Maria understands the way your lenses color your perception of the world. Just as importantly, Maria engages with you in a way that changes your lenses and opens you to greater possibilities for growth in your life. I am grateful to know Maria as a friend and to work with her as an educational consultant." <br /> <br />~Aaron Garner <br />Tetra Prime Consulting Co-Founder~
+                   "Maria is very passionate about helping others to grow and develop. Maria's communication is always of service to the people that she works with. Maria understands the way your lenses color your perception of the world. Just as importantly, Maria engages with you in a way that changes your lenses and opens you to greater possibilities for growth in your life. I am grateful to know Maria as a friend and to work with her as an educational consultant." <br /> <br />~Aaron Garner <br />Tetra Prime Consulting Co-Founder~
                 </h4>
                 <div className="py-6 testimony-dot">
                     <Eye /><Eye />
