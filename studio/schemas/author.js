@@ -1,7 +1,10 @@
+import { BsPersonSquare } from 'react-icons/bs'
+
 export default {
   name: "author",
   type: "document",
-  title: "Author",
+  title: "Authors",
+  icon: BsPersonSquare,
   fields: [
     {
       name: "name",

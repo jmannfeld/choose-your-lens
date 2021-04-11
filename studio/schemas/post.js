@@ -1,7 +1,10 @@
+import { IoNewspaperOutline } from 'react-icons/io5'
+
 export default {
   name: "post",
-  title: "Blog Post",
+  title: "Blog Posts",
   type: "document",
+  icon: IoNewspaperOutline,
   fields: [
     {
       name: "title",
@@ -71,6 +74,12 @@ export default {
       title: "Body",
       type: "blockContent",
     },
+    {
+      name: "featuredBlog",
+      title: "Featured Blog",
+      type: "boolean",
+      description: "Display this blog post on the homepage"
+    }
   ],
 
   preview: {
