@@ -1,5 +1,3 @@
 [[redirects]]
   from = "/admin"
   to = "https://chooseyourlens.sanity.studio"
-  status = 200
-  force = true
