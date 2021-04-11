@@ -30,6 +30,7 @@ export default {
       name: "slug",
       title: "Slug",
       type: "slug",
+      description: "This will be used for the blog post's URL",
       options: {
         source: "title",
         maxLength: 96,
@@ -53,7 +54,7 @@ export default {
     },
     {
       name: "publishedAt",
-      title: "Published at",
+      title: "Published on",
       type: "date",
     },
     {
