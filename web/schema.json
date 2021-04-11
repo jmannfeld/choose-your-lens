@@ -1887,6 +1887,16 @@
                   "defaultValue": null
                 },
                 {
+                  "name": "featuredBlog",
+                  "description": "",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "BooleanQueryOperatorInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
                   "name": "body",
                   "description": "",
                   "type": {
@@ -2158,6 +2168,16 @@
                 },
                 {
                   "name": "description",
+                  "description": "",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "StringQueryOperatorInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "altText",
                   "description": "",
                   "type": {
                     "kind": "INPUT_OBJECT",
@@ -2458,6 +2478,16 @@
                 },
                 {
                   "name": "description",
+                  "description": "",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "StringQueryOperatorInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "altText",
                   "description": "",
                   "type": {
                     "kind": "INPUT_OBJECT",
@@ -23956,6 +23986,16 @@
               "defaultValue": null
             },
             {
+              "name": "altText",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "sha1hash",
               "description": "",
               "type": {
@@ -26014,6 +26054,18 @@
             },
             {
               "name": "description",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "altText",
               "description": null,
               "args": [],
               "type": {
@@ -28093,6 +28145,12 @@
               "deprecationReason": null
             },
             {
+              "name": "image___asset___altText",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "image___asset___sha1hash",
               "description": null,
               "isDeprecated": false,
@@ -30064,6 +30122,18 @@
               "deprecationReason": null
             },
             {
+              "name": "featuredBlog",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "body",
               "description": null,
               "args": [],
@@ -30927,6 +30997,16 @@
               "defaultValue": null
             },
             {
+              "name": "featuredBlog",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "BooleanQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "body",
               "description": "",
               "type": {
@@ -31497,6 +31577,12 @@
               "deprecationReason": null
             },
             {
+              "name": "tileImage___asset___altText",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "tileImage___asset___sha1hash",
               "description": null,
               "isDeprecated": false,
@@ -31954,6 +32040,12 @@
             },
             {
               "name": "bannerImage___asset___description",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "bannerImage___asset___altText",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -32632,6 +32724,12 @@
             },
             {
               "name": "tags___internal___type",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "featuredBlog",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -33824,6 +33922,18 @@
               "deprecationReason": null
             },
             {
+              "name": "altText",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "sha1hash",
               "description": null,
               "args": [],
@@ -34134,6 +34244,16 @@
               "defaultValue": null
             },
             {
+              "name": "altText",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "sha1hash",
               "description": "",
               "type": {
@@ -34371,6 +34491,12 @@
             },
             {
               "name": "description",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "altText",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -35434,6 +35560,12 @@
             },
             {
               "name": "description",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "altText",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

@@ -73,6 +73,14 @@ export default function blog({ location, data, pageContext }: PageProps<{}>) {
                                     <p className="author-block-name">{blog.authors[0].author.name}</p>
                                 </div>
                             }
+                            {blog.tags[0] &&
+                                <div className="tags-wrapper">
+                                    Tags:&nbsp;
+                                    {blog.tags.map(tag => (
+                                        <a href="#" className="tag">{tag.title}</a>
+                                    ))}
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -136,6 +144,10 @@ export const query = graphql`
                 }
             }
             publishedAt(formatString: "MMMM Do, YYYY")
+            featuredBlog
+            tags {
+                title
+            }
             body {
             children {
                 text

@@ -28,6 +28,10 @@ export interface BlogQuery_allSanityPost_edges_node_authors {
   author: BlogQuery_allSanityPost_edges_node_authors_author | null;
 }
 
+export interface BlogQuery_allSanityPost_edges_node_tags {
+  title: string | null;
+}
+
 export interface BlogQuery_allSanityPost_edges_node_body_children {
   text: string | null;
 }
@@ -61,6 +65,8 @@ export interface BlogQuery_allSanityPost_edges_node {
   description: string | null;
   authors: (BlogQuery_allSanityPost_edges_node_authors | null)[] | null;
   publishedAt: any | null;
+  featuredBlog: boolean | null;
+  tags: (BlogQuery_allSanityPost_edges_node_tags | null)[] | null;
   body: (BlogQuery_allSanityPost_edges_node_body | null)[] | null;
   bannerImage: BlogQuery_allSanityPost_edges_node_bannerImage | null;
 }

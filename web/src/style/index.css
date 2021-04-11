@@ -380,6 +380,21 @@ h6 {
     width: auto;
 }
 
+.tags-wrapper {
+    margin-top: 1rem;
+}
+
+.tag {
+    margin: 0 2px;
+    padding: 4px 10px;
+    color: #fff;
+    background: #8e24aa;
+    font-size: 80%;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
