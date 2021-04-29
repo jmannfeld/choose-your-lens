@@ -50,24 +50,33 @@ export const ItemBlog: React.FC<{}> = ( {data, featured} ) => {
         <div className={`blog-item w-full ${!featured && 'md:w-1/2 lg:w-1/3'} p-4`}>
             <div className={`transition-all duration-300 hover:shadow-2xl shadow ${focused && 'focused'}`}>
                 <Link to={`/blog/${data.slug.current}`} title={data.title} onFocus={() => changeFocused(true)} onBlur={() => changeFocused(false)}>
-                    <div className={featured ? 'image flex' : 'image'}>
+                    <div className={featured ? 'image flex flex-col lg:flex-row' : 'image'}>
                         <Img
                             fluid={data.tileImage.asset.fluid}
                             alt={data.title}
-                            className={featured ? 'w-1/2' : 'w-full'}
+                            className={featured ? 'w-full lg:w-1/2' : 'w-full'}
                         />
-                        <div className={featured ? 'w-1/2 p-4 py-3 w-1/2' : 'w-full p-4 py-3 w-1/2'}>
-                            <h4 className="text-color-2 font-black text-3xl pt-1">
+                        <div className={featured ? 'w-full lg:w-1/2 p-4 py-3 w-1/2' : 'w-full p-4 py-3 w-1/2'}>
+                            <h4 className="text-color-2 font-black text-4xl pt-1 mb-0">
                                 {data.title}
                             </h4>
-                            <div className="flex items-center text-secondary">
+                            <div className="pt-0 flex items-center text-secondary">
                                 <Calendar className="stroke-current"/>
-                                <p className="pl-2 text-color-default font-sans">{data.publishedAt}</p>
+                                <p className="pl-2 mt-3 mb-2 font-sans blog-date">{data.publishedAt}</p>
                             </div>
+                            {data.tags &&
+                                data.tags[0] &&
+                                    <div className="tags-wrapper">
+                                        {/* Tags:&nbsp; */}
+                                        {data.tags.map(tag => (
+                                            <a href="#" className="tag">{tag.title}</a>
+                                        ))}
+                                    </div>
+                            }
                             {featured ?
                                 postContent.body &&
                                     postContent.body.slice(0, 1).map(b => (
-                                        <div>
+                                        <div className="pt-3">
                                             <BlockContent blocks={b} serializers={serializers} key={b._key}/>
                                             <br />
                                             <button className="continue-reading">{buttonText}</button>
@@ -75,7 +84,7 @@ export const ItemBlog: React.FC<{}> = ( {data, featured} ) => {
                                     )
                                 )
                                 :
-                                <p className="pt-3 text-color-default">
+                                <p className="pt-2 text-color-default">
                                     {data.description}
                                 </p>
                             }

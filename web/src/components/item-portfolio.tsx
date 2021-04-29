@@ -76,7 +76,7 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
                     </div>
                     <div className="flex-1 flex md:px-4 lg:px-6 items-center">
                         <div
-                            className={`flex flex-1 flex-wrap  ${
+                            className={`flex-col flex-1 flex-wrap  ${
                                 even ? "md:justify-end md:text-right" : ""
                             }`}
                         >

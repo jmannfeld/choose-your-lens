@@ -381,18 +381,27 @@ h6 {
 }
 
 .tags-wrapper {
-    margin-top: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
 }
 
 .tag {
     margin: 0 2px;
     padding: 4px 10px;
     color: #fff;
-    background: #8e24aa;
+    /* background: #8e24aa; */
+    background: #6888df;
     font-size: 80%;
     font-family: sans-serif;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.blog-date {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #6888df;
 }
 
 @keyframes spin {

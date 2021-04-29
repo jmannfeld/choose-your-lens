@@ -79,6 +79,9 @@ export const query = graphql`
                     slug {
                         current
                     }
+                    tags {
+                        title
+                    }
                     tileImage {
                         asset {
                             fluid(maxWidth: 700) {

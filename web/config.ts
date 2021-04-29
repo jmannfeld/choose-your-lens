@@ -32,7 +32,7 @@ const siteMetadata = {
         },
         {
             name: "COLLABS",
-            url: "/portfolio",
+            url: "/portfolio/podcasts",
         },
         {
             name: "SERVICES",

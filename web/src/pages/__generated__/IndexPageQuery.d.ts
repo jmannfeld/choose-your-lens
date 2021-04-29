@@ -84,6 +84,10 @@ export interface IndexPageQuery_blog_slug {
   current: string | null;
 }
 
+export interface IndexPageQuery_blog_tags {
+  title: string | null;
+}
+
 export interface IndexPageQuery_blog_tileImage_asset_fluid {
   base64: string | null;
   aspectRatio: number;
@@ -133,6 +137,7 @@ export interface IndexPageQuery_blog {
   title: string | null;
   description: string | null;
   slug: IndexPageQuery_blog_slug | null;
+  tags: (IndexPageQuery_blog_tags | null)[] | null;
   tileImage: IndexPageQuery_blog_tileImage | null;
   bannerImage: IndexPageQuery_blog_bannerImage | null;
   publishedAt: any | null;
