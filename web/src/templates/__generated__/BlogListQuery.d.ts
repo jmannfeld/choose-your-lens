@@ -11,6 +11,10 @@ export interface BlogListQuery_allSanityPost_edges_node_slug {
   current: string | null;
 }
 
+export interface BlogListQuery_allSanityPost_edges_node_tags {
+  title: string | null;
+}
+
 export interface BlogListQuery_allSanityPost_edges_node_tileImage_asset_fluid {
   base64: string | null;
   aspectRatio: number;
@@ -60,6 +64,7 @@ export interface BlogListQuery_allSanityPost_edges_node {
   title: string | null;
   description: string | null;
   slug: BlogListQuery_allSanityPost_edges_node_slug | null;
+  tags: (BlogListQuery_allSanityPost_edges_node_tags | null)[] | null;
   tileImage: BlogListQuery_allSanityPost_edges_node_tileImage | null;
   bannerImage: BlogListQuery_allSanityPost_edges_node_bannerImage | null;
   publishedAt: any | null;
