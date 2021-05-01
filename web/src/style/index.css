@@ -215,6 +215,7 @@ h6 {
 .post-content p {
     @apply my-3;
     font-size: 1.25rem;
+    line-height: 1.75;
 }
 
 .post-content h1,
