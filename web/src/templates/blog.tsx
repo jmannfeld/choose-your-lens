@@ -17,10 +17,16 @@ const client = require('@sanity/client')({
 const serializers = {
     types: {
         code: props => (
-        <pre data-language={props.node.language}>
-            <code>{props.node.code}</code>
-        </pre>
-        )
+            <pre data-language={props.node.language}>
+                <code>{props.node.code}</code>
+            </pre>
+        ),
+        block: props => {
+            if (props.node.style === 'blockquote') {
+                return <p className="pretty-quote text-3xl">{props.children}</p>
+            }
+            return <p>{props.children}</p>
+        }
     }
 }
 

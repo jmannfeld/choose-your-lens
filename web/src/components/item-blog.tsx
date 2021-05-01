@@ -29,8 +29,6 @@ const serializers = {
 }
 
 export const ItemBlog: React.FC<{}> = ( {data, featured} ) => {
-    console.log('item blog data', data)
-    console.log('item blog featured', featured)
     const [focused, changeFocused] = useState(false);
 
     const [postContent, setPostContent] = useState([])
@@ -45,7 +43,7 @@ export const ItemBlog: React.FC<{}> = ( {data, featured} ) => {
     }, [])
 
     const buttonText = <div className="continue-text"><p className="pr-1">Continue reading</p><ArrowRight /></div>;
-    console.log('data', data);
+
     return (
         <div className={`blog-item w-full ${!featured && 'md:w-1/2 lg:w-1/3'} p-4`}>
             <div className={`transition-all duration-300 hover:shadow-2xl shadow ${focused && 'focused'}`}>
@@ -62,21 +60,20 @@ export const ItemBlog: React.FC<{}> = ( {data, featured} ) => {
                             </h4>
                             <div className="pt-0 flex items-center text-secondary">
                                 <Calendar className="stroke-current"/>
-                                <p className="pl-2 mt-3 mb-2 font-sans blog-date">{data.publishedAt}</p>
+                                <p className="pl-2 mt-3 mb-2 font-sans blog-meta-text">{data.publishedAt}</p>
                             </div>
                             {data.tags &&
                                 data.tags[0] &&
                                     <div className="tags-wrapper">
-                                        {/* Tags:&nbsp; */}
                                         {data.tags.map(tag => (
-                                            <a href="#" className="tag">{tag.title}</a>
+                                            <div className="tag inline" key={tag.title}>{tag.title}</div>
                                         ))}
                                     </div>
                             }
                             {featured ?
                                 postContent.body &&
                                     postContent.body.slice(0, 1).map(b => (
-                                        <div className="pt-3">
+                                        <div className="pt-3" key={b}>
                                             <BlockContent blocks={b} serializers={serializers} key={b._key}/>
                                             <br />
                                             <button className="continue-reading">{buttonText}</button>
