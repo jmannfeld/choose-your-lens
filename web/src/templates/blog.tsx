@@ -77,7 +77,7 @@ export default function blog({ location, data, pageContext }: PageProps<{}>) {
                                         <div className="tags-wrapper">
                                             {/* Tags:&nbsp; */}
                                             {blog.tags.map(tag => (
-                                                <a href="#" className="tag">{tag.title}</a>
+                                                <a href="#" className="tag" key={tag.title}>{tag.title}</a>
                                                 ))}
                                         </div>
                                     }
