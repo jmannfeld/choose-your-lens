@@ -14,7 +14,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "@sanity/dashboard",
-    "dashboard-widget-netlify"
+    "dashboard-widget-netlify",
+    "netlify-deploy-status-badge"
   ],
   "env": {
     "development": {
