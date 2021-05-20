@@ -3,3 +3,8 @@
   to = "https://chooseyourlens.sanity.studio"
   status = 301
   force = true
+
+# adding ignore build config to allow trigger from Sanity Dashboard
+
+[build]
+  ignore = "false"
