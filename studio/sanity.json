@@ -12,7 +12,9 @@
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/dashboard",
+    "dashboard-widget-netlify"
   ],
   "env": {
     "development": {
@@ -29,6 +31,10 @@
     {
       "implements": "part:@sanity/base/brand-logo",
       "path": "./components/logo.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./plugins/dashboardConfig.js"
     }
   ]
 }
