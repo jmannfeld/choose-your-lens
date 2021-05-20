@@ -1,5 +1,7 @@
 import React from "react"
 const BlockContent = require('@sanity/block-content-to-react')
+import getYouTubeId from 'get-youtube-id'
+import YouTube from 'react-youtube'
 import { graphql, PageProps } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
@@ -26,6 +28,15 @@ const serializers = {
                 return <p className="pretty-quote text-3xl">{props.children}</p>
             }
             return <p>{props.children}</p>
+        },
+        youtube: ({ node }) => {
+            const { url } = node
+            const id = getYouTubeId(url)
+            return (
+                <div className="flex justify-center">
+                    <YouTube videoId={id} />
+                </div>
+            )
         }
     }
 }
@@ -75,7 +86,6 @@ export default function blog({ location, data, pageContext }: PageProps<{}>) {
                                     </p>
                                     {blog.tags[0] &&
                                         <div className="tags-wrapper">
-                                            {/* Tags:&nbsp; */}
                                             {blog.tags.map(tag => (
                                                 <a href="#" className="tag" key={tag.title}>{tag.title}</a>
                                                 ))}
