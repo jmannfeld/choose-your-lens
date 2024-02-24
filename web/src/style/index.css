@@ -33,7 +33,7 @@ h6 {
 }
 
 .boxed {
-    @apply max-w-screen-lg w-full mx-auto;
+    @apply w-full max-w-screen-lg mx-auto;
 }
 
 .large-container {
@@ -57,12 +57,12 @@ h6 {
 }
 
 .nav .nav-links li a {
-    @apply inline-block p-1 relative z-10;
+    @apply relative z-10 inline-block p-1;
 }
 
 .nav .nav-links li:before {
     content: "";
-    @apply absolute w-0 h-0 rounded-full bg-primary left-0 right-0 bottom-0 top-0 m-auto opacity-25;
+    @apply absolute top-0 bottom-0 left-0 right-0 w-0 h-0 m-auto rounded-full opacity-25 bg-primary;
     transition: width 0.25s, height 0.25s;
 }
 
@@ -85,7 +85,7 @@ h6 {
 }
 
 .title h1 {
-    @apply text-color-1 font-black;
+    @apply font-black text-color-1;
 }
 
 .supports-blend .title h1 {
@@ -116,7 +116,7 @@ h6 {
 }
 
 .btn {
-    @apply h-12 px-6 outline-none inline-flex relative overflow-hidden items-center;
+    @apply relative inline-flex items-center h-12 px-6 overflow-hidden outline-none;
 }
 
 .btn.disabled {
@@ -129,7 +129,7 @@ h6 {
 
 .btn:before {
     content: "";
-    @apply absolute w-full h-full top-0;
+    @apply absolute top-0 w-full h-full;
     left: 100%;
     transition: left 0.25s;
     transition-timing-function: cubic-bezier(1, 2.13, 1, -0.1);
@@ -149,7 +149,7 @@ h6 {
 }
 
 .btn-primary {
-    @apply bg-primary my-4;
+    @apply my-4 bg-primary;
     color: #fff;
 }
 
@@ -196,13 +196,13 @@ h6 {
 }
 
 .animated-link-parent a {
-    @apply inline-block relative;
+    @apply relative inline-block;
 }
 
 .animated-link-parent a:after {
     content: "";
     transition-property: width;
-    @apply absolute bg-gradient-primary duration-300 w-0 left-0 bottom-0;
+    @apply absolute bottom-0 left-0 w-0 duration-300 bg-gradient-primary;
     height: 2px;
 }
 
@@ -224,7 +224,7 @@ h3,
 h4,
 h5,
 h6 {
-    @apply font-black text-color-2 my-4;
+    @apply my-4 font-black text-color-2;
 }
 
 .post-content h1 {
@@ -296,7 +296,7 @@ h6 {
 }
 
 .post-content blockquote {
-    @apply border-l-4 border-primary p-3;
+    @apply p-3 border-l-4 border-primary;
 }
 
 .post-content iframe {
@@ -411,6 +411,7 @@ h6 {
     border: 4px solid #8e24aa;
     max-height: 600px;
     float: left;
+    margin-right: 1.5rem;
 }
 
 .pretty-quote {
